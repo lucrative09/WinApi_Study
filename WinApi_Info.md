@@ -105,3 +105,13 @@ Rectangle 대신 넣는다고 생각하면 편리하다. Ellipse(hdc, 130, 20, 1
 ## 브러시(brush)
 - 도형의 내부를 색상과 패턴으로 채우는 역활
 - 스톡오브젝트를 사용한 브러시
+
+## 브러시 생성 함수 및 사용방법
+CreateSolidBrush()... CreatehatchBrush().. 등등
+ex) HBRUSH CreateSolidBrush(COLORREF color)
+
+1) 브러시 생성           : CreateSolidBrush()
+2) 브러시 설정           : SelectObject()
+3) 도형 출력
+4) 이전 브러시 복구      : SelectObject()
+5) 생성한 브러시 제거    : DeleteObject()
