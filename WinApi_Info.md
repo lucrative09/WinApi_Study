@@ -115,3 +115,104 @@ ex) HBRUSH CreateSolidBrush(COLORREF color)
 3) 도형 출력
 4) 이전 브러시 복구      : SelectObject()
 5) 생성한 브러시 제거    : DeleteObject()
+
+## 비트맵(Bitmap)
+
+이미지 종류
+bmp, jpg, gif, tga 등
+
+## 비트맵을 다루는 두가지 방법
+
+1) 비트맵을 리소스에 등록
+2) LoadImage()함수를 이용하여 파일로부터 읽어내는 방법
+
+## 비트맵을 읽어 출력하는 순서
+
+1) 비트맵의 핸들을 얻는다   LoadBitmap(), LoadImage()
+2) 메모리 DC 생성          CreateCompatibleDC()
+3) 메모리 DC에 비트맵 적용  SelectObject()
+4) 비트맵 출력             BitBlt()
+5) 메모리 DC와 비트맵 제거  DeleteCD(), DeleteObject()
+
+## 키보드
+os의 메세지를 통해서 모든 window api관련 내용을 만든다.
+
+문자 키에 발생하는 메시지
+일반적으로 키보드에서 입력할때 발생하는 이벤트
+WM_CHAR
+대소문자 구분 방법
+wParan
+아스키 코드 값
+
+# 키보드 메시지
+모든 키에 대해 발생하는 메시지
+WM_KEYDOWN
+- 키 구분 방법
+wParam : 가상 키 코드, 문자는 대문자
+- 가상 키 코드
+VK_LEFT, VK_HOME
+'1','A'문자상수 사용
+```c++
+case WM_KEYDOWN:
+        switch (wParam)
+        {
+        case VK_LEFT:
+            MessageBox(hWnd, "LeftKey를 눌렀습니다.", NULL, NULL);
+            break;
+        case VK_RIGHT:
+            MessageBox(hWnd, "RightKey를 눌렀습니다.", NULL, NULL);
+            break;
+        case VK_F1:
+            MessageBox(hWnd, "f1Key를 눌렀습니다.", NULL, NULL);
+            break;
+        }
+       break;
+```
+# GetAsyncKeyState()
+- 실시간으로 키 입력을 체크
+- 메시지 큐에 저장되는 키 메시지의 단점을 보안
+- 키 눌림이 있으면 음수값 리턴
+  SHORT GetAsyncKeyState(int vKey)
+
+## 마우스
+- 마우스 메시지 타입
+# WM_MOUSEMOVE
+- 마우스 이동시 발생
+- 마우스 위치 정보
+    LOWORD(IParam) -> x 좌표
+    HIWORD(IParam) -> y 좌표
+```c++
+ case WM_MOUSEMOVE:
+    nXPos = LOWORD(lParam);
+    nYPos = HIWORD(lParam);
+    break;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
