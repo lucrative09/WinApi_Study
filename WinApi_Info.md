@@ -187,12 +187,23 @@ case WM_KEYDOWN:
     nYPos = HIWORD(lParam);
     break;
 ```
+# 마우스 드레그 기능 (WM_MOUSEMOVE)
+MK_LBUTTON, MK_MBUTTON, MK_RBUTTON, MK_CONTROL
+WM_MOUSEMOVE + MK_LBUTTON
 
+## 타이머
 
+# 역할
 
+일정한 시간 간격으로 함수 호출 또는 WM_TIMER 메시지 발생
 
+# 사용용도
 
+일정한 시간 간격으로 코드 실행
 
+# 생성 함수는 한개만 존재 UINT_PTR SetTimer()
+참고해서 만들어보기
+https://chanos.tistory.com/entry/Windows-API-Win32-API%EC%9D%98-%ED%83%80%EC%9D%B4%EB%A8%B8%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%B4-%EC%8B%9C%EA%B3%84-%EB%A7%8C%EB%93%A4%EA%B8%B0-1
 
 
 
