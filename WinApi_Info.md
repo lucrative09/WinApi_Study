@@ -206,6 +206,13 @@ WM_MOUSEMOVE + MK_LBUTTON
 https://chanos.tistory.com/entry/Windows-API-Win32-API%EC%9D%98-%ED%83%80%EC%9D%B4%EB%A8%B8%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%B4-%EC%8B%9C%EA%B3%84-%EB%A7%8C%EB%93%A4%EA%B8%B0-1
 
 
+## 다이얼로그
+
+# 모달형 다이얼로그
+- 다이얼로그가 최우선 순위
+- 대표적인 다이얼로그 형태 Message Box()
+- 메시지 박스를 이용한 모달형 다이얼로그
+
 
 
 
